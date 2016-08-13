@@ -1,0 +1,29 @@
+MLP Size			(2, 5, 1)
+Epochs:				100000
+Learning Rate:		5
+
+Training:
+Epoch:	10000      	Error:	0.0066272611662
+Epoch:	20000     	Error:	0.00449451131782
+Epoch:	30000     	Error:	0.00362106041806
+Epoch:	40000     	Error:	0.00311767268928
+Epoch:	50000     	Error:	0.00278040482018
+Epoch:	60000     	Error:	0.00253424431916
+Epoch:	70000     	Error:	0.00234435619666
+Epoch:	80000     	Error:	0.00219208729408
+Epoch:	90000     	Error:	0.0020664331324
+Epoch:	100000     	Error:	0.00196042756446
+
+Testing:
+
+Target:	[0]
+Output:	[ 0.00154766]
+
+Target:	[1]
+Output:	[ 0.99794447]
+
+Target:	[1]
+Output:	[ 0.99795135]
+
+Target:	[0]
+Output:	[ 0.00218984]

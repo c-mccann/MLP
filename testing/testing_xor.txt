@@ -1,0 +1,43 @@
+Originally tested at mlp size (2,2,1) as recommended in the specification with a learning rate of 1 and 10,000 epochs
+produced this result:
+
+Error:	0.0661362724765
+
+Target:	[0]             Target:	[1]             Target:	[1]             Target:	[0]
+Output:	[ 0.03295058]   Output:	[ 0.9305278]    Output:	[ 0.93052773]   Output:	[ 0.09263431]
+
+
+Increasing the epochs to 100,000, and learning rate down to 0.5 produced this:
+
+Error:	0.0267068420994
+
+Target:	[0]             Target:	[1]             Target:	[1]             Target:	[0]
+Output:	[ 0.01063675]   Output:	[ 0.97122288]   Output:	[ 0.97122287]   Output:	[ 0.0386358]
+
+Bringing the learning rate back up to 1 produced this:
+
+Error:	0.0184333143591
+
+Target:	[0]             Target:	[1]             Target:	[1]             Target:	[0]
+Output:	[ 0.00671524]   Output:	[ 0.97996816]   Output:	[ 0.97996816]   Output:	[ 0.02695395]
+
+I began to increase the learning rate hugely, and with an MLP of size (2,5,1) with a learning rate of 37 (38 began
+to stagnate at error 0.25) produced this:
+
+Error:	0.000810133080955
+
+Target:	[0]             Target:	[1]             Target:	[1]             Target:	[0]
+Output:	[ 0.00081926]   Output:	[ 0.99923358]   Output:	[ 0.99921834]   Output:	[ 0.00087318]
+
+I then began messing with the number of hidden nodes, they stagnated at error 0.25 at 9 hidden nodes, but using an mlp
+of size (2,8,1) with a learning rate of 37 and 100000 epochs produced this:
+
+Error:	0.000267230463705
+
+Target:	[0]             Target:	[1]             Target:	[1]             Target:	[0]
+Output:	[ 0.00033262]   Output:	[ 0.99991776]   Output:	[ 0.99954212]   Output:	[ 0.00019618]
+
+Using too high a learning rate negatively affects the performance of the mlp, similarly to how too many hidden nodes
+cause it to not learn properly, it is a delicate balance to get the best performance.
+
+

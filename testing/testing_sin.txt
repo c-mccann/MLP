@@ -1,0 +1,53 @@
+I Used an MLP of size (4,5,1) as suggested in the specification throughout these series of tests.
+
+with learning rate 1 and 1 million epochs it produced this roughly, at every 100,000 epochs:
+
+Error:	0.362451597947
+
+with a learning rate of 0.5 the mlp did not reduce in error producing this:
+
+Error:	0.371091566959
+
+after bringing the learning rate down to 0.01 it produced this, which decreased at every epoch:
+
+Error:  0.0196139155198
+
+I then tested this learning rate of 0.01 with an mlp of size (4,8,1) and 1 million epochs and it produced this:
+
+Error:	0.00756985922901
+
+
+here is an example of some testing done on the last ten vectors from the last test mentioned:
+
+Target:	[ 0.35705035]   Target:	[-0.56881336]   Target:	[ 0.82051931]   Target:	[ 0.49021646]   Target:	[-0.95174018]
+Output:	[ 0.47473392]   Output:	[-0.92633713]   Output:	[ 0.68025715]   Output:	[ 0.54778421]   Output:	[ 0.19093587]
+
+Target:	[-0.63006188]   Target:	[-0.20265689]   Target:	[-0.42822506]   Target:	[ 0.43273905]   Target:	[-0.3632775]
+Output:	[-0.55055374]   Output:	[-0.36332581]   Output:	[-0.25401854]   Output:	[ 0.99539648]   Output:	[-0.23506484]
+
+
+Testing at MLP size (4,8,1) learning rate of 0.005 and 10 million epochs produced this:
+
+Error:	0.00240153071795
+
+Target:	[ 0.35705035]   Target:	[-0.56881336]   Target:	[ 0.82051931]   Target:	[ 0.49021646]  Target:	[-0.95174018]
+Output:	[ 0.64954084]   Output:	[-0.96527906]   Output:	[ 0.73454281]   Output:	[ 0.57126125]  Output:	[-0.31543746]
+
+Target:	[-0.63006188]   Target:	[-0.20265689]   Target:	[-0.42822506]   Target:	[ 0.43273905]   Target:	[-0.3632775]
+Output:	[-0.7524836]    Output:	[-0.3100946]    Output:	[ 0.0449303]    Output:	[ 0.99958384]   Output:	[-0.21343183]
+
+The outputs from the test set are close, but there is room for huge improvement with regard to minimising discrepancies
+between the target and the output.
+
+I feel if I increased the number of hidden nodes to find the the perfect number for this problem and played with
+the learning rate and epochs to find the perfect balance, a lower error rate could be produced however I am satisfied
+with how well the mlp can learn.
+
+
+
+
+
+
+
+
+
